@@ -1,1 +1,1 @@
-# medisin-hackathon
+# MediSIN Hackathon Project
