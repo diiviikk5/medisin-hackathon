@@ -68,9 +68,6 @@ npm run build
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 
-## Contributing
-
-This is a hackathon project. Feel free to fork and experiment!
 
 
 
