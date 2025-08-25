@@ -1,6 +1,9 @@
-Demo Video -
+
 
 # MediSIN
+
+<img width="1898" height="903" alt="image" src="https://github.com/user-attachments/assets/1e32df3b-978b-434a-9a4b-4c9a38914f15" />
+
 
 MediSIN is a satirical healthcare web application built with React. It features interactive components, dark humor, and engaging UI effects designed for entertainment.
 
@@ -47,6 +50,7 @@ npm install
 npm run dev
 
 
+<img width="246" height="433" alt="image" src="https://github.com/user-attachments/assets/863f074c-ed47-476f-acc3-7cde78f71689" />
 
 4. Build for production
 npm run build
@@ -55,25 +59,6 @@ npm run build
 
 ## Project Structure
 
-medisin-hackathon/
-├── public/ # Static assets (audio, images)
-├── src/
-│ ├── components/ # Reusable UI components
-│ │ ├── AnxietyCursor.jsx
-│ │ ├── PanicButton.jsx
-│ │ ├── ThunderousMode.jsx
-│ │ ├── MoeChat.jsx
-│ │ └── ...
-│ ├── pages/ # Page components
-│ │ ├── Home.jsx
-│ │ ├── Catalog.jsx
-│ │ └── ...
-│ ├── App.jsx # Main application component
-│ ├── main.jsx # Entry point
-│ └── index.css # Global styles
-├── package.json
-├── vite.config.js
-└── tailwind.config.js
 
 
 
