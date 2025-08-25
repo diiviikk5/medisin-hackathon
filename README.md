@@ -34,22 +34,22 @@ MediSIN is a satirical healthcare web application built with React. It features 
 git clone https://github.com/diiviikk5/medisin-hackathon.git
 cd medisin-hackathon
 
-text
+
 
 2. Install dependencies
 npm install
 
-text
+
 
 3. Start development server
 npm run dev
 
-text
+
 
 4. Build for production
 npm run build
 
-text
+
 
 ## Project Structure
 
@@ -73,7 +73,7 @@ medisin-hackathon/
 ├── vite.config.js
 └── tailwind.config.js
 
-text
+
 
 ## Scripts
 
@@ -85,9 +85,7 @@ text
 
 This is a hackathon project. Feel free to fork and experiment!
 
-## License
 
-MIT License
 
 ## Disclaimer
 
