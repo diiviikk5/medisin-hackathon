@@ -1,0 +1,98 @@
+[
+  {
+    "id": "cough",
+    "name": "Cough",
+    "icon": "🤧",
+    "description": "Persistent throat rebellion"
+  },
+  {
+    "id": "headache", 
+    "name": "Headache",
+    "icon": "🤕",
+    "description": "Brain filing noise complaints"
+  },
+  {
+    "id": "fever",
+    "name": "Fever", 
+    "icon": "🌡️",
+    "description": "Internal heating system malfunction"
+  },
+  {
+    "id": "stomach_ache",
+    "name": "Stomach Ache",
+    "icon": "🤢", 
+    "description": "Digestive system staging a revolt"
+  },
+  {
+    "id": "back_pain",
+    "name": "Back Pain",
+    "icon": "🦴",
+    "description": "Spine requesting immediate retirement"
+  },
+  {
+    "id": "heartbreak",
+    "name": "Heartbreak",
+    "icon": "💔",
+    "description": "Emotional operating system crashed"
+  },
+  {
+    "id": "monday_blues", 
+    "name": "Monday Blues",
+    "icon": "😴",
+    "description": "Chronic weekend withdrawal syndrome"
+  },
+  {
+    "id": "wifi_down",
+    "name": "WiFi Down",
+    "icon": "📵",
+    "description": "Digital life support failure"
+  },
+  {
+    "id": "burnout",
+    "name": "Burnout", 
+    "icon": "🔥",
+    "description": "Motivational software corrupted"
+  },
+  {
+    "id": "cold_feet",
+    "name": "Cold Feet",
+    "icon": "🦶",
+    "description": "Commitment hardware failure"
+  },
+  {
+    "id": "insomnia",
+    "name": "Insomnia",
+    "icon": "😵‍💫", 
+    "description": "Sleep.exe has stopped working"
+  },
+  {
+    "id": "anxiety",
+    "name": "Anxiety",
+    "icon": "😰",
+    "description": "Worry processor overheating"
+  },
+  {
+    "id": "procrastination",
+    "name": "Procrastination",
+    "icon": "⏰",
+    "description": "Productivity driver outdated"
+  },
+  {
+    "id": "social_media_addiction",
+    "name": "Social Media Addiction",
+    "icon": "📱",
+    "description": "Dopamine distribution malfunction"
+  },
+  {
+    "id": "impostor_syndrome", 
+    "name": "Impostor Syndrome",
+    "icon": "🎭",
+    "description": "Self-confidence license expired"
+  },
+  {
+    "id": "decision_fatigue",
+    "name": "Decision Fatigue", 
+    "icon": "🤯",
+    "description": "Choice processing unit overloaded"
+  }
+]

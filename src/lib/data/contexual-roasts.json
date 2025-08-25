@@ -1,0 +1,32 @@
+{
+  "add_to_cart": [
+    "Another fine addition to your collection of regrets.",
+    "Cart updated. Dignity not found.", 
+    "Purchase pending. Common sense declined.",
+    "Item added. Bank account not consulted."
+  ],
+  "export": [
+    "Export complete. Quality not included.",
+    "File generated with premium disappointment.",
+    "Your export is ready for professional judgment.",
+    "Generated successfully. Usefulness sold separately."
+  ],
+  "diagnosis": [
+    "Diagnosis confirmed. Prognosis: expensive.",
+    "Results ready. Insurance not impressed.",
+    "Analysis complete. Reality not covered.",
+    "Consultation finished. Hope not included."
+  ],
+  "second_opinion": [
+    "Second opinion: First opinion was optimistic.",
+    "Alternative diagnosis: Still your problem.",
+    "Updated prognosis: Upgrade your subscription.",
+    "Revised treatment: Try harder next time."
+  ],
+  "decline_payment": [
+    "Respect the consistency.",
+    "Broke but determined. We admire that.",
+    "Your wallet matches your symptoms: empty.",
+    "Payment declined. So is our sympathy."
+  ]
+}

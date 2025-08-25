@@ -1,0 +1,312 @@
+[
+  {
+    "id": "1",
+    "name": "Aspirin",
+    "category": "tablet",
+    "composition": [
+      "Active ingredient: Acetylsalicylic Acid", 
+      "Binders for no reason", 
+      "Filler (mostly hope)"
+    ],
+    "sideEffects": [
+      "May cause stomach to file complaints",
+      "Occasional dizziness when standing up to reality", 
+      "Random bouts of sarcasm (uncontrollable)",
+      "Sudden urge to read medicine labels obsessively"
+    ],
+    "indications": [
+      "For the pain of existing in 2025",
+      "To pretend your headache is from too much work",
+      "Occasionally prevents heart attacks (side benefit)"
+    ],
+    "contraindications": [
+      "If you love your stomach lining",
+      "Avoid if you plan to party hard tonight",
+      "Not recommended for people who hate side effects"
+    ],
+    "price": {
+      "original": 10,
+      "crossed": 9999,
+      "discount": "Poverty Mode Special"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Metformin",
+    "category": "tablet", 
+    "composition": [
+      "Helps body use insulin (allegedly)",
+      "Magical sugar regulator",
+      "Placebo effect pending approval"
+    ],
+    "sideEffects": [
+      "May cause unexpected weight changes",
+      "Mood swings guaranteed (not refundable)",
+      "Increased sighing at life choices",
+      "Sudden craving for healthier lifestyle"
+    ],
+    "indications": [
+      "For confusing sugar levels that confuse everyone",
+      "To blame when snacks mysteriously disappear",
+      "Diabetes management (the boring part)"
+    ],
+    "contraindications": [
+      "If you plan to binge on sweets tomorrow",
+      "Avoid if you hate surprises",
+      "Not for people who prefer chaos over control"
+    ],
+    "price": {
+      "original": 25,
+      "crossed": 4999,
+      "discount": "Beggar's Discount"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Amoxicillin",
+    "category": "tablet",
+    "composition": [
+      "Antibiotic warrior against tiny enemies",
+      "Microbe destroyer 3000",
+      "Also a mood enhancer (if you believe hard enough)"
+    ],
+    "sideEffects": [
+      "Upset stomach (very dramatic)",
+      "Temporary hatred of all foods",
+      "Laziness overload syndrome",
+      "Sudden appreciation for probiotics"
+    ],
+    "indications": [
+      "When microscopic germs wage war",
+      "To feel medicated and important",
+      "Bacterial infections (the medical reason)"
+    ],
+    "contraindications": [
+      "If you prefer your good gut bacteria",
+      "Avoid if you're a probiotic enthusiast",
+      "Not recommended during yogurt appreciation week"
+    ],
+    "price": {
+      "original": 45,
+      "crossed": 7599,
+      "discount": "Trial User Rate"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Loratadine (Claritin)",
+    "category": "tablet",
+    "composition": [
+      "Allergy fighter supreme",
+      "Seasonal siege relief formula",
+      "Contains side effect of feeling too chill"
+    ],
+    "sideEffects": [
+      "Drowsiness (if you misuse the dosage)",
+      "Dry mouth for drama lovers",
+      "Possibly seeing unicorns (rare, unconfirmed)",
+      "Decreased interest in outdoor activities"
+    ],
+    "indications": [
+      "Seasonal sniffles and drama",
+      "Sudden romantic encounters with pollen",
+      "Avoiding unwanted social interactions (sneezing edition)"
+    ],
+    "contraindications": [
+      "If you actually want to stay alert",
+      "Avoid while operating heavy machinery or life decisions",
+      "Not for people who enjoy being stuffed up"
+    ],
+    "price": {
+      "original": 15,
+      "crossed": 2999,
+      "discount": "Broke But Hopeful"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Omeprazole (Prilosec)",
+    "category": "capsule",
+    "composition": [
+      "Acid reducer extraordinaire",
+      "Stomach peacekeeper",
+      "Memory eraser for bad food choices"
+    ],
+    "sideEffects": [
+      "Gas and bloating invite unexpected guests",
+      "Temporary forgetfulness (convenient)",
+      "Random cravings for digestive biscuits",
+      "Increased confidence in spicy food consumption"
+    ],
+    "indications": [
+      "Heartburn caused by poor life decisions",
+      "Excessive spicy food penance",
+      "Midnight snack defense protocol"
+    ],
+    "contraindications": [
+      "If you actually enjoy gastritis",
+      "Avoid if you hate stomach comfort",
+      "Not for masochists who love acid reflux"
+    ],
+    "price": {
+      "original": 20,
+      "crossed": 3999,
+      "discount": "Student Survival Special"
+    }
+  },
+  {
+    "id": "6",
+    "name": "Ibuprofen (Advil)",
+    "category": "tablet",
+    "composition": [
+      "Pain vanisher deluxe",
+      "Anti-inflammatory superhero",
+      "Contains traces of false confidence"
+    ],
+    "sideEffects": [
+      "Stomach irritation (because everything has a price)",
+      "Drowsiness in 12% of users (lucky them)",
+      "Sudden belief that you can exercise again",
+      "Temporary invincibility complex"
+    ],
+    "indications": [
+      "When life literally hurts",
+      "Post-gym regret management",
+      "Headaches from thinking too much"
+    ],
+    "contraindications": [
+      "If you have trust issues with your stomach",
+      "Avoid if you're already on thin ice with your liver",
+      "Not for people who enjoy suffering"
+    ],
+    "price": {
+      "original": 12,
+      "crossed": 1999,
+      "discount": "Pain Relief Peasant"
+    }
+  },
+  {
+    "id": "7",
+    "name": "Cetirizine (Zyrtec)",
+    "category": "tablet",
+    "composition": [
+      "Allergy terminator advanced",
+      "Histamine blocker supreme",
+      "Seasonal depression reliever (side effect)"
+    ],
+    "sideEffects": [
+      "Drowsiness (the good kind)",
+      "Dry mouth epidemic",
+      "Sudden urge to become an indoor person",
+      "Decreased enthusiasm for gardening"
+    ],
+    "indications": [
+      "When nature attacks your sinuses",
+      "Hay fever warfare",
+      "Pet allergy denial management"
+    ],
+    "contraindications": [
+      "If you enjoy the thrill of constant sneezing",
+      "Avoid if you want to stay awake during meetings",
+      "Not recommended for professional athletes"
+    ],
+    "price": {
+      "original": 18,
+      "crossed": 3499,
+      "discount": "Sneeze-Free Student"
+    }
+  },
+  {
+    "id": "8",
+    "name": "Paracetamol (Tylenol)",
+    "category": "tablet",
+    "composition": [
+      "Universal pain solution",
+      "Fever fighter basic edition",
+      "Contains optimism in tablet form"
+    ],
+    "sideEffects": [
+      "False sense of wellness",
+      "Temporary belief that you're invincible",
+      "Liver gives you judgmental looks (high doses)",
+      "Sudden motivation to tackle life problems"
+    ],
+    "indications": [
+      "When everything hurts but you can't afford therapy",
+      "Fever reduction for the dramatically inclined",
+      "General life dissatisfaction (off-label use)"
+    ],
+    "contraindications": [
+      "If you prefer to feel every ache and pain",
+      "Avoid if your liver is already working overtime",
+      "Not for people who enjoy being miserable"
+    ],
+    "price": {
+      "original": 8,
+      "crossed": 1299,
+      "discount": "Basic Human Survival"
+    }
+  },
+  {
+    "id": "9",
+    "name": "Montelukast (Singulair)",
+    "category": "tablet",
+    "composition": [
+      "Asthma prevention specialist",
+      "Allergy season bodyguard",
+      "Contains mysterious respiratory confidence"
+    ],
+    "sideEffects": [
+      "Vivid dreams about breathing easily",
+      "Sudden interest in outdoor activities",
+      "Decreased respect for air pollution",
+      "Mild euphoria when climbing stairs"
+    ],
+    "indications": [
+      "When breathing becomes a competitive sport",
+      "Allergy season survival",
+      "Exercise-induced reality checks"
+    ],
+    "contraindications": [
+      "If you enjoy the dramatic wheeze",
+      "Avoid if you prefer indoor hermit lifestyle",
+      "Not for people who hate easy breathing"
+    ],
+    "price": {
+      "original": 55,
+      "crossed": 8999,
+      "discount": "Breathing is Expensive"
+    }
+  },
+  {
+    "id": "10",
+    "name": "Lansoprazole (Prevacid)",
+    "category": "capsule",
+    "composition": [
+      "Acid production inhibitor",
+      "Gastric rebellion suppressor",
+      "Contains confidence in spicy food choices"
+    ],
+    "sideEffects": [
+      "Overconfidence in buffet decisions",
+      "Temporary amnesia about lactose intolerance",
+      "Sudden craving for street food adventures",
+      "Decreased fear of heartburn consequences"
+    ],
+    "indications": [
+      "When your stomach stages a revolt",
+      "Ulcer prevention for stress eaters",
+      "GERD management for the chronically anxious"
+    ],
+    "contraindications": [
+      "If you enjoy the burn of regret",
+      "Avoid if you prefer your stomach angry",
+      "Not for masochistic food enthusiasts"
+    ],
+    "price": {
+      "original": 35,
+      "crossed": 5999,
+      "discount": "Heartburn Survivor"
+    }
+  }
+]
