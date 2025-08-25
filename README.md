@@ -1,12 +1,80 @@
-# React + Vite
+MediSIN
+MediSIN is a satirical healthcare web application built with React. It features interactive components, dark humor, and engaging UI effects designed for entertainment.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Theme Toggle: Switch between MediSIN and MediHUB modes
 
-Currently, two official plugins are available:
+Anxiety Cursor: Interactive cursor that avoids UI elements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Panic Button: Triggers Shah Rukh Khan laugh with volume control
 
-## Expanding the ESLint configuration
+Thunder Mode: Alakh Pandey motivational audio with screen effects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Product Catalog: Browse satirical healthcare products
+
+Shopping Cart: Add and manage items
+
+Chat Interface: Interactive assistant chatbot
+
+Responsive Design: Built with Tailwind CSS
+
+Tech Stack
+React 18
+
+Vite
+
+Tailwind CSS
+
+React Router
+
+Lucide React Icons
+
+React Hot Toast
+
+Getting Started
+Prerequisites
+Node.js (v16 or higher)
+
+npm or yarn
+
+Installation
+Clone the repository
+
+bash
+git clone https://github.com/diiviikk5/medisin-hackathon.git
+cd medisin-hackathon
+Install dependencies
+
+bash
+npm install
+Start development server
+
+bash
+npm run dev
+Build for production
+
+bash
+npm run build
+Project Structure
+text
+medisin-hackathon/
+├── public/              # Static assets (audio, images)
+├── src/
+│   ├── components/      # Reusable UI components
+│   │   ├── AnxietyCursor.jsx
+│   │   ├── PanicButton.jsx
+│   │   ├── ThunderousMode.jsx
+│   │   ├── MoeChat.jsx
+│   │   └── ...
+│   ├── pages/           # Page components
+│   │   ├── Home.jsx
+│   │   ├── Catalog.jsx
+│   │   └── ...
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles
+├── package.json
+├── vite.config.js
+└── tailwind.config.js
+Scripts
+npm run dev - Start development server
