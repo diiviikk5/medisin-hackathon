@@ -1,15 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useAnnoyUser } from '../hooks/useAnnoyUser'
+import { useAchievements } from '../contexts/AchievementContext'
 import panicImage from '../assets/image.png'
 
 export function PanicButton() {
   const [panicked, setPanicked] = useState(false)
   const { triggerRoast } = useAnnoyUser()
+  const { trackPanicClick, trackPanicHover } = useAchievements()
   const audioRef = useRef(null)
   const timeoutRef = useRef(null)
+  const hoverTimeoutRef = useRef(null)
+  const hoverCountRef = useRef(0)
+
+  // Hover tracking for "Overthinker" achievement
+  const handleMouseEnter = () => {
+    hoverCountRef.current = 0
+    hoverTimeoutRef.current = setInterval(() => {
+      hoverCountRef.current += 0.1
+      if (hoverCountRef.current >= 10) {
+        trackPanicHover(10)
+        clearInterval(hoverTimeoutRef.current)
+      }
+    }, 100)
+  }
+
+  const handleMouseLeave = () => {
+    if (hoverTimeoutRef.current) {
+      clearInterval(hoverTimeoutRef.current)
+      hoverCountRef.current = 0
+    }
+  }
 
   useEffect(() => {
     if (panicked) {
+      // TRACK ACHIEVEMENT - Panic button clicked
+      trackPanicClick()
+      
       // Only trigger roast once when panicked becomes true
       triggerRoast('panic')
       
@@ -42,7 +68,7 @@ export function PanicButton() {
         audioRef.current.currentTime = 0
       }
     }
-  }, [panicked]) // Remove triggerRoast from dependencies
+  }, [panicked, trackPanicClick]) // Added trackPanicClick to dependencies
 
   const closePanic = () => {
     setPanicked(false)
@@ -51,6 +77,15 @@ export function PanicButton() {
       audioRef.current.currentTime = 0
     }
   }
+
+  // Cleanup hover tracking on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) {
+        clearInterval(hoverTimeoutRef.current)
+      }
+    }
+  }, [])
 
   return (
     <>
@@ -71,6 +106,8 @@ export function PanicButton() {
         <button
           className="fixed bottom-6 right-6 z-50 rounded-full bg-red-600 hover:bg-red-700 active:bg-red-800 text-white w-16 h-16 shadow-lg flex items-center justify-center font-bold transition-colors text-sm"
           onClick={() => setPanicked(true)}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           aria-label="Activate Emergency Panic Mode"
         >
           PANIC

@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react'
 import alakhImage from '../assets/alakh_pandey.png'
+import { useAchievements } from '../contexts/AchievementContext'
 
 export function ThunderousMode() {
   const [active, setActive] = useState(false)
   const audioRef = useRef(null)
+  const { trackThunderActivation } = useAchievements()
 
   // Simple effect - no external dependencies to cause loops
   useEffect(() => {
     if (active) {
+      // TRACK ACHIEVEMENT WHEN THUNDER MODE ACTIVATES
+      trackThunderActivation()
+
       // Add screen shake
       document.body.style.animation = 'screenShake 0.6s ease-in-out infinite'
       
@@ -29,7 +34,7 @@ export function ThunderousMode() {
         audioRef.current.currentTime = 0
       }
     }
-  }, [active]) // Only depends on active state
+  }, [active, trackThunderActivation]) // Added trackThunderActivation to dependencies
 
   // Audio ended handler
   const handleAudioEnd = () => {

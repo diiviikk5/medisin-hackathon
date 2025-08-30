@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ShoppingCart, Pill } from 'lucide-react'
+import { ShoppingCart, Pill, Trophy } from 'lucide-react'
 import { useStore } from '../lib/store'
-import { ThemeToggle } from './ThemeToggle'
+import { useAchievements } from '../contexts/AchievementContext'
 
 export function Navbar() {
   const cart = useStore((state) => state.cart)
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0)
+  
+  // Get achievements for badge count
+  const { achievements } = useAchievements()
+  const unlockedCount = achievements?.filter(a => a.unlocked).length || 0
   
   // Theme detection for dynamic title
   const [isPHMode, setIsPHMode] = useState(false)
@@ -54,12 +58,47 @@ export function Navbar() {
             >
               Buy "Medicine"
             </Link>
+            
+            {/* NEW SYMPTOM CHECKER LINK */}
+            <Link 
+              to="/symptom-checker" 
+              className="text-slate-300 hover:text-white transition-colors font-medium text-lg hover:scale-105 transform duration-200"
+            >
+              🩺 Symptom Checker
+            </Link>
+            
+            {/* NEW MEDCOOKER LINK */}
+            <Link 
+              to="/medcooker" 
+              className="text-slate-300 hover:text-white transition-colors font-medium text-lg hover:scale-105 transform duration-200"
+            >
+              ⚗️ MedCooker
+            </Link>
+            
             <Link 
               to="/advice" 
               className="text-slate-300 hover:text-white transition-colors font-medium text-lg hover:scale-105 transform duration-200"
             >
               Get Bad Advice
             </Link>
+            
+            {/* ACHIEVEMENTS LINK */}
+            <Link 
+              to="/achievements" 
+              className="relative p-3 text-slate-300 hover:text-white transition-colors hover:bg-slate-700/50 rounded-xl group"
+              title="View your achievements"
+            >
+              <div className="flex items-center gap-2">
+                <Trophy className="h-5 w-5 group-hover:text-yellow-400 transition-colors" />
+                <span className="hidden md:inline font-medium">Achievements</span>
+              </div>
+              {unlockedCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-yellow-400 to-yellow-500 text-black text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold animate-pulse">
+                  {unlockedCount}
+                </span>
+              )}
+            </Link>
+            
             <Link 
               to="/cart"
               className="relative p-3 text-slate-300 hover:text-white transition-colors hover:bg-slate-700/50 rounded-xl"
@@ -71,9 +110,6 @@ export function Navbar() {
                 </span>
               )}
             </Link>
-            
-            {/* Dark Mode Toggle */}
-            <ThemeToggle />
           </div>
         </div>
       </div>

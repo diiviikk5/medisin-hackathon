@@ -10,6 +10,8 @@ import { FakeVolumeControl } from '../components/FakeVolumeControl'
 import { AnxietyCursor } from '../components/AnxietyCursor'
 import { MoeChat } from '../components/MoeChat'
 import { PanicButton } from '../components/PanicButton'
+import { useAchievements } from '../contexts/AchievementContext'
+import matrixImage from '../assets/matrix-choice.jpeg'
 
 // FAQ Data
 const faqs = [
@@ -82,6 +84,108 @@ const testimonials = [
     quote: "HEHEHEHEHEHEHEHEHEH"
   }
 ]
+
+// Matrix Choice Component
+function MatrixChoice({ isPHMode, setIsPHMode }) {
+  const { trackThemeSwitch } = useAchievements()
+
+  const toggleToSIN = () => {
+    setIsPHMode(false)
+    document.body.classList.remove('ph-theme')
+    document.documentElement.classList.remove('ph-theme')
+    // TRACK ACHIEVEMENT - Theme switched
+    trackThemeSwitch()
+  }
+
+  const toggleToHUB = () => {
+    setIsPHMode(true)
+    document.body.classList.add('ph-theme')
+    document.documentElement.classList.add('ph-theme')
+    // TRACK ACHIEVEMENT - Theme switched
+    trackThemeSwitch()
+  }
+
+  return (
+    <div className="relative flex justify-center items-center mb-20" style={{ height: '320px' }}>
+      {/* Matrix Background Image */}
+      <img 
+        src={matrixImage}
+        alt="Choose Your Path"
+        className="absolute top-0 select-none pointer-events-none"
+        style={{
+          width: '320px',
+          height: 'auto',
+          opacity: 0.9,
+          filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.8))',
+        }}
+      />
+
+      {/* Left Hand - SIN Mode Button */}
+      <button
+        onClick={toggleToSIN}
+        className="absolute transition-all duration-300 hover:scale-110 active:scale-95"
+        style={{
+          top: '140px',
+          left: 'calc(50% - 165px)',
+          background: !isPHMode ? 
+            'linear-gradient(45deg, #dc2626, #b91c1c)' : 
+            'linear-gradient(45deg, #1e40af, #3730a3)',
+          color: 'white',
+          border: '2px solid rgba(255,255,255,0.4)',
+          padding: '14px 20px',
+          borderRadius: '30px',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          cursor: 'pointer',
+          boxShadow: !isPHMode ? 
+            '0 0 30px rgba(220, 38, 38, 0.8), 0 0 60px rgba(220, 38, 38, 0.4)' :
+            '0 0 20px rgba(30, 64, 175, 0.6)',
+          zIndex: 1000,
+          opacity: !isPHMode ? 1 : 0.7,
+          transform: !isPHMode ? 'scale(1.05)' : 'scale(0.95)',
+        }}
+      >
+        💊 SIN MODE
+      </button>
+
+      {/* Right Hand - HUB Mode Button */}
+      <button
+        onClick={toggleToHUB}
+        className="absolute transition-all duration-300 hover:scale-110 active:scale-95"
+        style={{
+          top: '140px',
+          left: 'calc(46% + 65px)',
+          background: isPHMode ? 
+            'linear-gradient(45deg, #ea580c, #c2410c)' : 
+            'linear-gradient(45deg, #f97316, #ea580c)',
+          color: 'white',
+          border: '2px solid rgba(255,255,255,0.4)',
+          padding: '14px 20px',
+          borderRadius: '30px',
+          fontSize: '14px',
+          fontWeight: 'bold',
+          cursor: 'pointer',
+          boxShadow: isPHMode ? 
+            '0 0 30px rgba(234, 88, 12, 0.8), 0 0 60px rgba(234, 88, 12, 0.4)' :
+            '0 0 20px rgba(249, 115, 22, 0.6)',
+          zIndex: 1000,
+          opacity: isPHMode ? 1 : 0.7,
+          transform: isPHMode ? 'scale(1.05)' : 'scale(0.95)',
+        }}
+      >
+        🧡 HUB MODE
+      </button>
+
+      {/* Choice Instruction Text */}
+      <div 
+        className="absolute bottom-0 text-center text-slate-400 text-sm font-medium"
+        style={{ pointerEvents: 'none' }}
+      >
+        Choose Your Reality
+      </div>
+    </div>
+  )
+}
 
 // FAQ Component
 function FAQSection({ isPHMode }) {
@@ -200,6 +304,12 @@ function TestimonialsSection({ isPHMode }) {
 // Main Home Component
 export function Home() {
   const [isPHMode, setIsPHMode] = useState(false)
+  const { trackPageVisit } = useAchievements()
+
+  // Track page visit for achievements
+  useEffect(() => {
+    trackPageVisit('home')
+  }, [trackPageVisit])
 
   // Check for PH theme changes
   useEffect(() => {
@@ -278,6 +388,11 @@ export function Home() {
           </div>
         </div>
       </section>
+
+      {/* MATRIX CHOICE SECTION - PERFECTLY POSITIONED */}
+      <div className="container">
+        <MatrixChoice isPHMode={isPHMode} setIsPHMode={setIsPHMode} />
+      </div>
 
       {/* Features Section */}
       <section className="section">

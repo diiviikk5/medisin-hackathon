@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useAchievements } from '../contexts/AchievementContext'
 
 export function FakeVolumeControl() {
   const [volume, setVolume] = useState(35)
@@ -7,6 +8,7 @@ export function FakeVolumeControl() {
   const [lastPosition, setLastPosition] = useState(0)
   const intervalRef = useRef(null)
   const dragRef = useRef(null)
+  const { trackVolumeAdjustment } = useAchievements()
 
   // Volume decreases over time - BUT ONLY WHEN NOT DRAGGING
   useEffect(() => {
@@ -50,6 +52,8 @@ export function FakeVolumeControl() {
     // FIXED: Much higher threshold to prevent rapid increases
     if (currentY > lastPosition && volume < 100 && Math.abs(currentY - lastPosition) > 15) { // Changed from 2 to 15
       setVolume(prev => Math.min(100, prev + 2)) // 2% per pump
+      // TRACK ACHIEVEMENT HERE
+      trackVolumeAdjustment()
     }
     
     setLastPosition(currentY)
@@ -70,7 +74,7 @@ export function FakeVolumeControl() {
       document.removeEventListener('mousemove', handleMouseMove)
       document.removeEventListener('mouseup', handleMouseUp)
     }
-  }, [isDragging, lastPosition, volume])
+  }, [isDragging, lastPosition, volume, trackVolumeAdjustment])
 
   return (
     <div style={{
