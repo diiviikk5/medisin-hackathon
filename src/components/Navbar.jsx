@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { ShoppingCart, Pill, Trophy } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { ShoppingCart, Pill, Trophy, ArrowLeft } from 'lucide-react'
 import { useStore } from '../lib/store'
 import { useAchievements } from '../contexts/AchievementContext'
 
 export function Navbar() {
+  const navigate = useNavigate()
   const cart = useStore((state) => state.cart)
   const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0)
   
@@ -52,6 +53,17 @@ export function Navbar() {
           </Link>
           
           <div className="flex items-center space-x-6">
+            {/* BACK TO ENTRY GATE BUTTON */}
+            <button
+              onClick={() => navigate('/entry')}
+              className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-red-600 to-purple-600 hover:from-red-700 hover:to-purple-700 text-white font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 border border-white/20"
+              title="Return to Entry Gate"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span className="hidden md:inline">Entry Gate</span>
+              <span className="md:hidden">🚪</span>
+            </button>
+            
             <Link 
               to="/catalog" 
               className="text-slate-300 hover:text-white transition-colors font-medium text-lg hover:scale-105 transform duration-200"

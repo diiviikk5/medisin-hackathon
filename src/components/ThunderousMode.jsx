@@ -206,7 +206,7 @@ export function ThunderousMode() {
             onClick={(e) => e.stopPropagation()}
           >
             <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>
-              "PADHLE BSDK!" ⚡
+              "PADHLE BHAI!" ⚡
             </p>
             <p style={{ opacity: 0.8, fontSize: '14px' }}>
               Click anywhere to close • Audio will auto-close when finished

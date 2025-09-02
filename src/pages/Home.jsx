@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   Pill, MessageSquare, ShoppingBag,
   AlertTriangle, Star, Zap, Shield, Heart
@@ -93,7 +93,6 @@ function MatrixChoice({ isPHMode, setIsPHMode }) {
     setIsPHMode(false)
     document.body.classList.remove('ph-theme')
     document.documentElement.classList.remove('ph-theme')
-    // TRACK ACHIEVEMENT - Theme switched
     trackThemeSwitch()
   }
 
@@ -101,7 +100,6 @@ function MatrixChoice({ isPHMode, setIsPHMode }) {
     setIsPHMode(true)
     document.body.classList.add('ph-theme')
     document.documentElement.classList.add('ph-theme')
-    // TRACK ACHIEVEMENT - Theme switched
     trackThemeSwitch()
   }
 
@@ -305,6 +303,7 @@ function TestimonialsSection({ isPHMode }) {
 export function Home() {
   const [isPHMode, setIsPHMode] = useState(false)
   const { trackPageVisit } = useAchievements()
+  const navigate = useNavigate() // ADDED FOR BACK BUTTON
 
   // Track page visit for achievements
   useEffect(() => {
@@ -329,10 +328,11 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-orbs">
+
       {/* UTILITIES - POSITIONED TO AVOID OVERLAPS */}
       
-      {/* Anxiety Cursor - Top Left */}
-      <div className="fixed top-28 left-4 z-40">
+      {/* Anxiety Cursor - Top Left (moved down to avoid button) */}
+      <div className="fixed top-36 left-4 z-40">
         <AnxietyCursor />
       </div>
       
