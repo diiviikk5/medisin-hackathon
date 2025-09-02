@@ -1,8 +1,8 @@
-MediSIN - The Unapologetically Chaotic Medical App
-Project Description
+## MediSIN - The Unapologetically Chaotic Medical App
+## Project Description
 MediSIN is a satirical medical application designed to challenge and entertain users through a series of absurd password challenges, chaotic animations, and interactive UI elements. The project combines technical sophistication with deliberate user experience chaos, creating an unforgettable journey that questions conventional design wisdom.
 
-Core Features
+## Core Features
 Entry Gate System
 Eight deliberately frustrating password requirements including vowel-consonant balance, forbidden letters, and dynamic daily constraints
 
@@ -64,7 +64,7 @@ Hidden developer references and inside jokes
 
 Unexpected UI behavior that maintains engagement
 
-Technology Stack
+## Technology Stack
 React.js (v18+) with functional components and hooks architecture
 
 Tailwind CSS for utility-first styling and custom animations
@@ -74,3 +74,33 @@ React Router DOM (v6+) for client-side navigation management
 Vite.js providing fast development server and optimized production builds
 
 react-hot-toast for dynamic notification system with custom styling
+## Setup and Installation
+Prerequisites
+Node.js (v18 or higher)
+
+npm or yarn package manager
+
+Installation Steps
+Clone the repository:
+
+bash
+git clone https://github.com/diiviikk5/medisin-hackathon.git
+Navigate to project directory:
+
+bash
+cd medisin-hackathon
+Install dependencies:
+
+bash
+npm install
+Start development server:
+
+bash
+npm run dev
+Access the application:
+Open http://localhost:5173 in your web browser
+
+Production Build
+bash
+npm run build
+npm run preview
